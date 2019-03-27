@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.Write("Number of seconds:");
+			string answer = Console.ReadLine();
+			double minutes = Convert.ToDouble(answer);
+			int minute = Convert.ToInt32(minutes);	
+			int minute2 = minute / 60;
+			int second = Convert.ToInt32(minutes/60);
+			int segundoverdadeiro = Convert.ToInt32(((minutes / 60) - second)*60);
+			Console.WriteLine(minute2 + ":" + segundoverdadeiro);
+			
+
+
+
+			Console.ReadKey();
+
+		}
+		
+	}
+}
