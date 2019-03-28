@@ -13,12 +13,23 @@ namespace ConsoleApp5
 			Console.Write("Number of seconds:");
 			string answer = Console.ReadLine();
 			double minutes = Convert.ToDouble(answer);
-			int minute = Convert.ToInt32(minutes);	
+			int minute = Convert.ToInt32(answer);	
 			int minute2 = minute / 60;
-			int second = Convert.ToInt32(minutes/60);
-			int segundoverdadeiro = Convert.ToInt32(((minutes / 60) - second)*60);
-			Console.WriteLine(minute2 + ":" + segundoverdadeiro);
-			
+			int second = Convert.ToInt32(minute/60);
+			if ((minutes-minute) >= 0.5)
+			{
+				
+				int segundoverdadeir = Convert.ToInt32((((minutes/ 60) - second)-0.499999999999999) * 60);
+				Console.WriteLine(minute2 + ":" + segundoverdadeir);
+			}
+			else
+			{
+
+
+				
+				int segundoverdadeir = Convert.ToInt32(((minutes / 60) - second) * 60);
+				Console.WriteLine(minute2 + ":" + segundoverdadeir);
+			}
 
 
 
